@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My task board</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/51dcff299f.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h1>My task board</h1>
+    <div id="noteInputSection">
+        <textarea id="noteContent" class="noteInput" placeholder="Enter your note"></textarea>
+        <div id="deadlineInputsSection">
+            <label>Deadline:</label>
+            <input type="date" id="noteDate" class="deadlineInputs">
+            <label>Time:</label>
+            <input type="time" id="noteTime" class="deadlineInputs">
+        </div>
+        <div id="buttons">
+            <button type="button" class="btns" id="clearInputs" onclick="clearInputs()">
+                <i class="far fa-trash-alt"></i> Clear
+            </button>
+            <button type="button" class="btns" id="saveNote" value="Save" onclick="saveNote()">
+                <i class="fas fa-check"></i> Save
+            </button>
+        </div>
+        <div id="errorMessage"></div>
+    </div>
+
+    <div id="allNotes"></div>
+
+    <div style="clear: both"></div>
+    <script src="main.js"></script>
+</body>
+
+</html>
